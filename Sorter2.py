@@ -133,7 +133,7 @@ class SortingApp:
         self.root = root
         self.root.title("🚀 Sorting GUI Dashboard")
         self.root.geometry("1050x720")
-        self.root.resizable(False, False)  # Fixed window size
+        self.root.resizable(False, False)  
         self.root.configure(fg_color="#2C3E50")
 
         self.numbers, self.results, self.sorted_data = [], {}, []
@@ -154,7 +154,6 @@ class SortingApp:
         toolbar = ctk.CTkFrame(self.root, fg_color="#2C3E50")
         toolbar.pack(fill="x", padx=8, pady=(8, 0))
 
-        # Removed toggle theme and font size adjust buttons
         ctk.CTkButton(toolbar, text="🎨 Change BG", command=self.change_bg_color).pack(side="left", padx=6)
         ctk.CTkButton(toolbar, text="🧹 Clear", command=self.clear_data, fg_color="#E74C3C").pack(side="left", padx=6)
         ctk.CTkButton(toolbar, text="🔄 Reset", command=self.reset_app, fg_color="#1ABC9C").pack(side="left", padx=6)
